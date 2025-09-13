@@ -1,79 +1,37 @@
-# React Crash Course
-This is an accompainment to my crash course on YouTube - https://www.youtube.com/shrutikapoor08
 
-✅ Step 1: Add a single movie card - 
-Key objectives - JSX, component design. 
-![Step 1](./src/assets/step-1.png)
+# Video Player Demo
 
-✅ Step 2: Add multiple movie cards. -
-Key objectives - array.map, conditional rendering, css styles
-![Step 2](step-2.png)
+This project demonstrates how to optimize a video player using React and Vite. It includes features such as movie listing, detail view, and a custom video player component.
 
-### **✅ Module 3: Building the MovieCard Component**
+## Features
+- Movie list and detail pages
+- Custom video player
+- Theme toggle (light/dark)
+- Responsive design
 
-- Styling card component
-    - calling external design libraries - card from shadcn
-        - https://netflixtechblog.com/hawkins-diving-into-the-reasoning-behind-our-design-system-964a7357547
-- event handling
-- Tailwind basics: utility-first styling
+## Getting Started
 
----
+### Prerequisites
+- Node.js (v16 or above)
+- pnpm (recommended)
 
-### **✅ Module 4: Setting up the rest of UI**
+### Installation
+```bash
+pnpm install
+```
 
-- Adding Header, Hero
-- CSS styles using CSS modules
-- Responsive layout for mobile → desktop
+### Running the App
+```bash
+pnpm dev
+```
+The app will be available at `http://localhost:3000` by default.
 
----
+## Project Structure
+- `src/components/` - UI components
+- `src/data/` - Movie data
+- `src/lib/` - Custom hooks and utilities
+- `src/routes/` - Route definitions
+- `src/store/` - State management
 
-### **✅ Module 5: Data & APIs**
-
-- Fetching movie data (mock API / TMDB API)
-- Handling loading + error states
-- Mapping API data to UI components
-- API integration best practices (keys, environment variables)
-
----
-
-### ✅ Module 6: Productionizing UI
-
-- Accessibility
-  
----
-
-### ✅ Module 7: Horizontal scrolling using useRef
-
-- understanding how to use useRef for implement horizontal scroll
----
-
-### ✅ Module 8: Implement routing
-
-- implement with TanStack Router
-
----
-
-### ✅ Module 9: Implement VideoPlayer component
-
-- custom hook
-- calling TanStack router loader and useParams
-- VideoPlayer component
-
----
-
-### ✅ **Module 10: State Management with Zustand**
-
-- When local state breaks down
-- Introducing Zustand store
-- Managing global state (dark mode)
-  
----
-
-Step - react query for better data handling
-
-Step - infinite scrolling
-
-Step - performance eoptimization - image optimization, preloading assets, proper format
-Step - clerk add - auth
-
-Step - adding error monitoring
+## License
+MIT

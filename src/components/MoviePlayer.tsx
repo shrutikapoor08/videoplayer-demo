@@ -9,8 +9,9 @@ const MoviePlayer = ({ movie }: MoviePlayerProps) => {
         <div className="min-h-screen bg-black text-white relative">
             <video
                 aria-label="Play movie"
-                className="w-full h-auto" controls autoPlay>
-                <source src={movie.videoUrl} type="video/mp4" />
+                poster={movie.poster_path}
+                className="w-full h-auto" controls>
+                <source src={"https://res.cloudinary.com/dubc3wnbv/video/upload/v1757295154/IMG_2779_bax6bk.mov"} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
