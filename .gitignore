@@ -1,0 +1,25 @@
+node_modules/
+.DS_Store
+dist
+dist-ssr
+*.local
+count.txt
+.env
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/dist
+.kombai/
+.vscode
+.tanstack/
+.tanstack
+.nitro
