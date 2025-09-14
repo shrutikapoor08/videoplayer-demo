@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
-    "start": "vite --port 3000",
+    "dev": "vite --port 5173",
+    "start": "vite --port 5173",
     "build": "vite build && tsc",
     "serve": "vite preview",
     "test": "vitest run"
@@ -34,8 +34,10 @@
     "jsdom": "^26.0.0",
     "lucide-react": "^0.542.0",
     "tailwind-merge": "^3.3.1",
+    "terser": "^5.44.0",
     "typescript": "^5.7.2",
     "vite": "^6.3.5",
+    "vite-bundle-analyzer": "^1.2.3",
     "vite-plugin-static-copy": "^3.1.2",
     "vitest": "^3.0.5",
     "web-vitals": "^4.2.4"

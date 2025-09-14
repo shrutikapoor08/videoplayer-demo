@@ -3,6 +3,20 @@
 
 This project demonstrates how to optimize a video player using React and Vite. It includes features such as movie listing, detail view, and a custom video player component.
 
+## Optimization layers
+Step 0: Unoptimized video player
+Step 1: minify, code split
+-     minify: true,
+    cssMinify: true,
+     autoCodeSplitting: true,
+     - View in `http://localhost:4000/` using `npx vite-bundle-analyzer --port 4000`
+  - terserOptions -minify : true
+
+- bundle size from 23KB to 14KB
+- view in bundle analyser
+
+
+
 ## Features
 - Movie list and detail pages
 - Custom video player
