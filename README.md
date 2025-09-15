@@ -1,4 +1,4 @@
-
+o
 # Video Player Demo
 
 This project demonstrates how to optimize a video player using React and Vite. It includes features such as movie listing, detail view, and a custom video player component.
@@ -17,6 +17,34 @@ Step 1: minify, code split
 
 
 
+Step 2 - React optimizations
+1. React Compiler - `pnpm install -D babel-plugin-react-compiler@rc`
+   MovieDetail - 5.7ms to render
+    MovieCard - 2.8ms to render
+
+Before
+MovieList - 27ms
+
+after - 
+MovieList - 20ms
+
+`vite.config.ts` - 
+```
+{
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }
+
+```
+
+
+1. Suspense.
+
+Step 3 - Lazy load. 
+2. Lazy load components, images, videos
+
+Step 4 - SSR
 ## Features
 - Movie list and detail pages
 - Custom video player

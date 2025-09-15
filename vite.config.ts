@@ -24,7 +24,11 @@ const config = {
       target: 'react',
       autoCodeSplitting: true,
     }),
-    react(),
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      }
+    }),
     viteStaticCopy({
       targets: [
         { src: "./assets/*", dest: "assets" },
