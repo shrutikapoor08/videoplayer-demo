@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { ClerkProvider } from '@clerk/clerk-react'
 
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
@@ -9,11 +8,6 @@ import { routeTree } from './routeTree.gen'
 import './index.css'
 import reportWebVitals from './reportWebVitals.ts'
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error('Add your Clerk Publishable Key to the .env file')
-}
 
 // Create a new router instance
 const router = createRouter({
@@ -38,10 +32,8 @@ if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
 
-        <RouterProvider router={router} />
-      </ClerkProvider>
+      <RouterProvider router={router} />
     </StrictMode>,
   )
 }

@@ -20,14 +20,18 @@ minify, code split
 
 
 
-Step 2 - React optimizations
-1. React Compiler - `pnpm install -D babel-plugin-react-compiler@rc`
-   MovieDetail - 5.7ms to render
-    MovieCard - 2.8ms to render
+### Step 2 - React optimizations
+1. View components in React Profiler
+   
+2. React Compiler - `pnpm install -D babel-plugin-react-compiler@rc`
+MovieDetail - 5.7ms to render
+MovieCard - 2.8ms to render
+
+3. Lazy Load components
 
 Before
 MovieList - 27ms
-
+x
 after - 
 MovieList - 20ms
 
