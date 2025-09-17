@@ -1,5 +1,7 @@
 import type { Movie } from "@/types";
 
+const TMDB_IMAGES_ASSET_URL = "https://image.tmdb.org/t/p/w500/";
+
 interface MoviePlayerProps {
     movie: Movie;
 }
@@ -9,7 +11,7 @@ const MoviePlayer = ({ movie }: MoviePlayerProps) => {
         <div className=" bg-black text-white relative">
             <video
                 height={"250px"}
-                poster={movie.poster_path}
+                poster={TMDB_IMAGES_ASSET_URL + movie.poster_path}
                 preload="metadata"
                 aria-label="Play movie"
                 className="w-full lg:h-[550px] sm:h-[250px]" controls>

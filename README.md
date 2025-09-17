@@ -41,20 +41,19 @@ Later - 25 re-renders
 ```
 
 
-### Step 3 - SSR
+### Step 3 - SSR & Router caching
 1. Move initial data load to the server. Show no fetch calls being made from the client. 
-
-
-### Step 4 - Router caching
 1. Preload data when mouse is hovered. 
+
+
+### Step 4 - Lazy load images
+FINAL LCP WIN! 
+1. lazy load movie cards
+2. convert hero image to an <img> with `fetchPriorirty = high`
+
+### Step 5 - Homework - Streaming SSR! 
+1. Commments can be streamed in as the user submits. 
 ---
-
-### Step 5 - Streaming SSR
-
-1. Plain SSR (blocking)
-2. Streaming SSR with suspense boundaries
-3. Cache preloading (router caching step)
-4. Avoiding waterfalls by co-locating data fetching
 
 
 ### Prerequisites
