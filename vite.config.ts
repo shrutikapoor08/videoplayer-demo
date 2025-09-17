@@ -4,7 +4,8 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
-import { analyzer } from 'vite-bundle-analyzer'
+import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import tsConfigPaths from 'vite-tsconfig-paths'
 
 const config = {
   mode: "development",
@@ -14,18 +15,28 @@ const config = {
     sourcemap: true,
     minify: true,
     cssMinify: true,
-    terserOptions: { compress: true, mangle: false },
+    terserOptions: { compress: false, mangle: false },
   },
   define: { "process.env.NODE_ENV": "'development'" },
   esbuild: { jsx: "automatic", jsxImportSource: "react" },
   plugins: [
     tailwindcss(),
+    tsConfigPaths(),
+    tanstackStart({
+      customViteReactPlugin: true,
+      prerender: {
+        // Enable prerendering
+        enabled: true,
+      }
+    }),
     tanstackRouter({
       target: 'react',
       autoCodeSplitting: true,
     }),
     react({
-
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
     }),
     viteStaticCopy({
       targets: [
@@ -38,7 +49,6 @@ const config = {
       ],
       silent: true,
     }),
-    analyzer(),
   ],
   resolve: {
     alias: {

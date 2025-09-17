@@ -26,8 +26,8 @@ minify, code split
 2. React Compiler - `pnpm install -D babel-plugin-react-compiler@rc`
 MovieDetail - 5.7ms to render
 MovieCard - 2.8ms to render
-34 re-renders
-25 re-renders
+First - 34 re-renders
+Later - 25 re-renders
 
 
 `vite.config.ts` - 
@@ -40,14 +40,22 @@ MovieCard - 2.8ms to render
 
 ```
 
-Step 4 - SSR
-## Features
-- Movie list and detail pages
-- Custom video player
-- Theme toggle (light/dark)
-- Responsive design
 
-## Getting Started
+### Step 3 - SSR
+1. Move initial data load to the server. Show no fetch calls being made from the client. 
+
+
+### Step 4 - Router caching
+1. Preload data when mouse is hovered. 
+---
+
+### Step 5 - Streaming SSR
+
+1. Plain SSR (blocking)
+2. Streaming SSR with suspense boundaries
+3. Cache preloading (router caching step)
+4. Avoiding waterfalls by co-locating data fetching
+
 
 ### Prerequisites
 - Node.js (v16 or above)

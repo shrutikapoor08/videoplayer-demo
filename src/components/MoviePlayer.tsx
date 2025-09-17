@@ -6,15 +6,21 @@ interface MoviePlayerProps {
 
 const MoviePlayer = ({ movie }: MoviePlayerProps) => {
     return (
-        <div className="min-h-screen bg-black text-white relative">
+        <div className=" bg-black text-white relative">
             <video
-                aria-label="Play movie"
+                height={"250px"}
                 poster={movie.poster_path}
-                className="w-full h-auto" controls>
-                <source src={"https://res.cloudinary.com/dubc3wnbv/video/upload/v1757295154/IMG_2779_bax6bk.mov"} type="video/quicktime" />
+                preload="metadata"
+                aria-label="Play movie"
+                className="w-full lg:h-[550px] sm:h-[250px]" controls>
+                <source src={"https://res.cloudinary.com/dubc3wnbv/video/upload/v1757295154/IMG_2779_bax6bk.mov"} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-        </div>
+
+
+        </div >
     );
 };
+
+
 export default MoviePlayer;
