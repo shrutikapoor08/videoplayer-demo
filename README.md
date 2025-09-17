@@ -26,14 +26,9 @@ minify, code split
 2. React Compiler - `pnpm install -D babel-plugin-react-compiler@rc`
 MovieDetail - 5.7ms to render
 MovieCard - 2.8ms to render
+34 re-renders
+25 re-renders
 
-3. Lazy Load components
-
-Before
-MovieList - 27ms
-x
-after - 
-MovieList - 20ms
 
 `vite.config.ts` - 
 ```
@@ -44,12 +39,6 @@ MovieList - 20ms
     }
 
 ```
-
-
-1. Suspense.
-
-Step 3 - Lazy load. 
-2. Lazy load components, images, videos
 
 Step 4 - SSR
 ## Features
@@ -84,3 +73,18 @@ The app will be available at `http://localhost:3000` by default.
 
 ## License
 MIT
+
+---
+
+---
+1. Suspense.
+
+Step 3 - Lazy load. 
+2. Lazy load components, images, videos
+3. 3. Lazy Load components
+
+Before
+MovieList - 27ms
+x
+after - 
+MovieList - 20ms

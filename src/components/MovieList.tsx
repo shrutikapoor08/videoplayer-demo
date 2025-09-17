@@ -5,8 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from '@tanstack/react-router';
 
 const MovieList = ({ movies }: MovieListProps) => {
-    const [showLeftArrow, setShowLeftArrow] = useState(false);
-    const [showRightArrow, setShowRightArrow] = useState(true);
+
     const listRef = useRef<HTMLUListElement>(null);
     const navigate = useNavigate();
 
@@ -15,7 +14,7 @@ const MovieList = ({ movies }: MovieListProps) => {
         if (container) {
             const scrollAmount =
                 direction === "left" ? -container.clientWidth : container.clientWidth;
-            container.scrollTo({ left: scrollAmount, behavior: "smooth" });
+            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
         }
     };
 

@@ -20,7 +20,6 @@ const Hero = () => {
             <ChevronRight size={ 20 } className={ styles.chevronIcon } />
           </button>
         </div>
-
       </div>
     </section>
   );
