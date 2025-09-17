@@ -40,6 +40,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
       <img
         src={movie?.poster_path ? TMDB_IMAGES_ASSET_URL + movie?.poster_path : "/placeholder.svg"}
         alt={movie?.title}
+        loading='lazy'
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 z-10"
       />
 
