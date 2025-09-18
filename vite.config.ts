@@ -22,7 +22,7 @@ const config = {
     tailwindcss(),
     tanstackRouter({
       target: 'react',
-      autoCodeSplitting: true,
+      autoCodeSplitting: false,
     }),
     react(),
     viteStaticCopy({
