@@ -14,7 +14,7 @@ const config = {
     sourcemap: true,
     minify: true,
     cssMinify: true,
-    terserOptions: { compress: true, mangle: false },
+    terserOptions: { compress: false, mangle: false },
   },
   define: { "process.env.NODE_ENV": "'development'" },
   esbuild: { jsx: "automatic", jsxImportSource: "react" },
