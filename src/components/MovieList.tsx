@@ -1,5 +1,8 @@
 import type { Movie, MovieListProps } from "@/types";
 import MovieCard from "./MovieCard";
+// import { lazy } from "react";
+// const MovieCard = lazy(() => import('@/components/MovieCard'))
+
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from '@tanstack/react-router';
