@@ -26,6 +26,10 @@ const config = {
     }),
     react({
 
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+
     }),
     viteStaticCopy({
       targets: [
