@@ -25,11 +25,9 @@ const config = {
       autoCodeSplitting: true,
     }),
     react({
-
       babel: {
         plugins: ['babel-plugin-react-compiler'],
       },
-
     }),
     viteStaticCopy({
       targets: [
