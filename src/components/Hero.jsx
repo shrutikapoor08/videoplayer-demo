@@ -1,14 +1,13 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import heroBackground from '../assets/images/hero-background.jpg';
 
 const Hero = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-black via-gray-900 to-black">
       <img
-        src={ heroBackground }
-        alt="Hero background"
+        src={"https://res.cloudinary.com/dubc3wnbv/image/upload/v1760360925/hero-background_ksbmpq.jpg" }
+        alt=""
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"
       />
