@@ -1,6 +1,6 @@
 import type { Movie, MovieListProps } from "@/types";
 import MovieCard from "./MovieCard";
-// import { lazy } from "react";
+// import { lazy, Suspense } from "react";
 // const MovieCard = lazy(() => import('@/components/MovieCard'))
 
 import { useRef, useState } from "react";
@@ -44,6 +44,7 @@ const MovieList = ({ movies }: MovieListProps) => {
                     </li>
                 ))}
             </ul>
+            {/* </Suspense> */}
             <button
                 onClick={() => handleScroll("right")}
                 className="right-0 top-0 bottom-0 bg-black/50 dark:bg-black/50 hover:bg-black/80 dark:hover:bg-black/80 text-white opacity-100 transition-all duration-300 flex items-center justify-center z-50 ml-2 p-0"

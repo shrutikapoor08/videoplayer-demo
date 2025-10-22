@@ -12,8 +12,8 @@ const config = {
     outDir: "dist",
     emptyOutDir: true,
     sourcemap: true,
-    minify: true,
-    cssMinify: true,
+    minify: false,
+    cssMinify: false,
     terserOptions: { compress: false, mangle: false },
   },
   define: { "process.env.NODE_ENV": "'development'" },
@@ -22,7 +22,7 @@ const config = {
     tailwindcss(),
     tanstackRouter({
       target: 'react',
-      autoCodeSplitting: true,
+      autoCodeSplitting: false,
     }),
     react({
       babel: {
