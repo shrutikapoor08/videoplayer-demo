@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Activity } from 'react';
 import MoviePlayer from './MoviePlayer';
 import { Link, useParams } from '@tanstack/react-router';
 import { useMovieDetail } from '@/lib/useMovieDetail';
@@ -107,77 +107,12 @@ const MovieDetail: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <Activity mode={movie ? 'visible' : 'hidden'}>
                 <MoviePlayer movie={movie} />
 
-            </div>
+            </Activity>
 
-            {/* Details Section */}
-            <div className="bg-card border border-border rounded-xl p-8 mb-8">
-                <h2 className="text-2xl font-bold text-card-foreground mb-6 font-['Poppins']">
-                    Movie Details
-                </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="flex flex-col gap-2">
-                        <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                            Release Date
-                        </span>
-                        <span className="text-base text-card-foreground font-medium">
-                            {movie.release_date ? new Date(movie.release_date).toLocaleDateString() : 'Unknown'}
-                        </span>
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                        <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                            Rating
-                        </span>
-                        <span className="text-base text-card-foreground font-medium">{rating}/10</span>
-                    </div>
-
-                    {movie.runtime && (
-                        <div className="flex flex-col gap-2">
-                            <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                                Duration
-                            </span>
-                            <span className="text-base text-card-foreground font-medium">{formatRuntime(movie.runtime)}</span>
-                        </div>
-                    )}
-
-                    {movie.genres && movie.genres.length > 0 && (
-                        <div className="flex flex-col gap-2">
-                            <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                                Genres
-                            </span>
-                            <span className="text-base text-card-foreground font-medium">
-                                {movie.genres.map(genre => genre.name).join(', ')}
-                            </span>
-                        </div>
-                    )}
-
-                    {movie.spoken_languages && movie.spoken_languages.length > 0 && (
-                        <div className="flex flex-col gap-2">
-                            <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                                Languages
-                            </span>
-                            <span className="text-base text-card-foreground font-medium">
-                                {movie.spoken_languages.map(lang => lang.name).join(', ')}
-                            </span>
-                        </div>
-                    )}
-
-                    {movie.production_companies && movie.production_companies.length > 0 && (
-                        <div className="flex flex-col gap-2">
-                            <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                                Production
-                            </span>
-                            <span className="text-base text-card-foreground font-medium">
-                                {movie.production_companies.slice(0, 3).map(company => company.name).join(', ')}
-                            </span>
-                        </div>
-                    )}
-                </div>
-            </div>
         </div>
     );
 };
