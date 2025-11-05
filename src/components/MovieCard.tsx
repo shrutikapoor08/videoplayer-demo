@@ -8,14 +8,11 @@ const TMDB_IMAGES_ASSET_URL = "https://image.tmdb.org/t/p/w500/";
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const [isMoviePlaying, setIsMoviePlaying] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setIsMoviePlaying(true);
   }
   const handleMouseLeave = () => {
     setIsHovered(false);
-    setIsMoviePlaying(false);
   }
 
   const handleMovieClick = () => {
@@ -33,7 +30,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
 
     >
       <Activity mode={isHovered ? "visible" : "hidden"}>
-        <MoviePlayer movie={movie} isHovered={isHovered} />
+        <MoviePlayer movie={movie} />
       </Activity>
 
       <Activity mode={isHovered ? "hidden" : "visible"}>

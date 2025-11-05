@@ -107,10 +107,9 @@ const MovieDetail: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <Activity mode={movie ? 'visible' : 'hidden'}>
-                <MoviePlayer movie={movie} />
 
-            </Activity>
+            <MoviePlayer movie={movie} />
+
 
 
         </div>
