@@ -1,11 +1,16 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import heroBackground from '../assets/images/hero-background.jpg';
 
 const Hero = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-black via-gray-900 to-black">
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/60 to-black/80 z-[1]"></div>
+      <div
+        className="absolute inset-0 z-[1] opacity-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/60 to-black/80 z-[2]"></div>
       <div className="relative z-10 text-center max-w-[600px] px-6 flex flex-col items-center w-full">
         <div className="text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">

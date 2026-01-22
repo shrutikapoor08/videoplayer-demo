@@ -29,8 +29,6 @@ export type MovieListProps = {
 
 export type MovieCardProps = {
   movie: Movie;
-  onMovieClick: (movie: any) => void;
-
 } 
  export interface TMDBResponse {
     page: number

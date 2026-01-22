@@ -2,40 +2,22 @@ import React, { useState } from 'react';
 
 import { Badge } from "@/components/ui/badge"
 import { Star, Play } from "lucide-react"
-import { Card } from './ui/card';
-import { useRouter } from '@tanstack/react-router';
+import { Link } from '@tanstack/react-router';
 import type { MovieCardProps } from '@/types';
 
 const TMDB_IMAGES_ASSET_URL = "https://image.tmdb.org/t/p/w500/";
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const router = useRouter();
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    // Prefetch movie detail route on hover with a small delay
-    setTimeout(() => {
-      router.preloadRoute({
-        to: '/movie/$id',
-        params: { id: movie.id.toString() }
-      });
-    }, 200);
-  };
 
   return (
-    <Card
-      className="group relative overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl outline-blue-200 bg-card p-0 border-0 md:min-w-[180px] w-[7rem]"
-      role="button"
-      tabIndex={0}
-      onMouseEnter={handleMouseEnter}
+    <Link
+      to="/movie/$id"
+      params={{ id: movie.id.toString() }}
+      preload="intent"
+      className="group relative overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl outline-blue-200 bg-card p-0 border-0 md:min-w-[180px] w-[7rem] rounded-xl block"
+      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => onMovieClick(movie)}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          onMovieClick(movie);
-        }
-      }}
     >
       <img
         src={movie?.poster_path ? TMDB_IMAGES_ASSET_URL + movie?.poster_path : "/placeholder.svg"}
@@ -45,7 +27,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
 
       {/* Overlay on hover */}
       <div
-        className={`absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"
+        className={`absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-300 pointer-events-none ${isHovered ? "opacity-100" : "opacity-0"
           }`}
       >
         <div className="text-center text-white p-4">
@@ -55,13 +37,13 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onMovieClick }) => {
       </div>
 
       {/* Rating badge */}
-      <div className="absolute top-2 right-2">
+      <div className="absolute top-2 right-2 pointer-events-none">
         <Badge variant="secondary" className="bg-black/70 text-white border-none">
           <Star className="w-3 h-3 mr-1 fill-yellow-400 text-yellow-400" />
           {movie.vote_average.toFixed(1)}
         </Badge>
       </div>
-    </Card >
+    </Link>
   );
 
 };
