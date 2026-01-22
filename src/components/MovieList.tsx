@@ -1,16 +1,14 @@
 import type { Movie, MovieListProps } from "@/types";
 import MovieCard from "./MovieCard";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from '@tanstack/react-router';
 
 const MovieList = ({ movies }: MovieListProps) => {
-    const [showLeftArrow, setShowLeftArrow] = useState(false);
-    const [showRightArrow, setShowRightArrow] = useState(true);
     const listRef = useRef<HTMLUListElement>(null);
     const navigate = useNavigate();
 
-    const handleScroll = (direction) => {
+    const handleScroll = (direction: "left" | "right") => {
         const container = listRef.current;
         if (container) {
             const scrollAmount =

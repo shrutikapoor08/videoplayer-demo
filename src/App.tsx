@@ -6,13 +6,11 @@ import useThemeStore from "./store/themeStore";
 import Hero from "./components/Hero";
 import MovieList from "./components/MovieList";
 
-import type { Movie } from "./types";
-
 
 
 const App: React.FC = () => {
   const { movies, error, loading } = usePopularMovies();
-  const { isDarkMode, initializeTheme } = useThemeStore();
+  const { initializeTheme } = useThemeStore();
 
   useEffect(() => {
     initializeTheme();

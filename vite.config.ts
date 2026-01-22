@@ -4,6 +4,8 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import { analyzer } from 'vite-bundle-analyzer';
+
 
 const config = {
   mode: "development",
@@ -16,7 +18,7 @@ const config = {
     terserOptions: { compress: false, mangle: false },
   },
   define: { "process.env.NODE_ENV": "'development'" },
-  esbuild: { jsx: "automatic", jsxImportSource: "react" },
+  esbuild: { jsx: "automatic" as const, jsxImportSource: "react" },
   plugins: [
     tailwindcss(),
     tanstackRouter({
@@ -35,6 +37,7 @@ const config = {
       ],
       silent: true,
     }),
+    analyzer(),
   ],
   resolve: {
     alias: {
