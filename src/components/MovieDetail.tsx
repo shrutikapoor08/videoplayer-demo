@@ -1,5 +1,5 @@
 import React from 'react';
-import MoviePlayer from './MoviePlayer';
+const MoviePlayer = React.lazy(() => import('./MoviePlayer'));
 import { Link, useParams } from '@tanstack/react-router';
 import { useMovieDetail } from '@/lib/useMovieDetail';
 import { Badge } from './ui/badge';
@@ -8,6 +8,13 @@ import { Plus, ArrowLeft } from 'lucide-react';
 
 const TMDB_IMAGES_ASSET_URL = "https://image.tmdb.org/t/p/w500/";
 const TMDB_BACKDROP_URL = "https://image.tmdb.org/t/p/w1280/";
+
+//move to utils
+const formatRuntime = (minutes: number) => {
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${hours}h ${mins}m`;
+};
 
 const MovieDetail: React.FC = () => {
     const { id: movieId } = useParams({ from: '/movie/$id' });
@@ -26,12 +33,6 @@ const MovieDetail: React.FC = () => {
     const releaseYear = movie.release_date ? new Date(movie.release_date).getFullYear() : 'Unknown';
     const rating = movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A';
     const ratingStars = movie.vote_average ? Math.round(movie.vote_average / 2) : 0;
-
-    const formatRuntime = (minutes: number) => {
-        const hours = Math.floor(minutes / 60);
-        const mins = minutes % 60;
-        return `${hours}h ${mins}m`;
-    };
 
     return (
         <div className="max-w-6xl mx-auto px-6 md:px-24 min-h-screen bg-background text-foreground">

@@ -11,6 +11,8 @@ bundle size - 1.76MB
 
 ### Step 1: Analyze bundle size and
 
+run `vite bundle analyser` using - `npm run build`
+
 - minified CSS
 - minified JS
 - code split routes using TS router
