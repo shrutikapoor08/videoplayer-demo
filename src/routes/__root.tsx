@@ -22,6 +22,7 @@ export const Route = createRootRoute({
         content: 'React Netflix Clone Application built by Shruti Kapoor',
       }],
     links: [
+      { rel: 'preload', href: appCss, as: 'style' },
       { rel: 'stylesheet', href: appCss },
       { rel: 'icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/logo192.png' },
