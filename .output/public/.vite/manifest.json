@@ -1,0 +1,79 @@
+{
+  "../../../../~start/default-client-entry.tsx": {
+    "file": "assets/main-Cpsl-jHU.js",
+    "name": "main",
+    "src": "../../../../~start/default-client-entry.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/routes/comments.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=errorComponent",
+      "src/routes/index.tsx?tsr-split=component",
+      "src/routes/movie.$id.tsx?tsr-split=errorComponent",
+      "src/routes/movie.$id.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/App-BL-pdSKQ.css"
+    ]
+  },
+  "/Users/shrutikapoor/Development/videoplayer-demo/src/App.css": {
+    "file": "assets/App-BL-pdSKQ.css",
+    "src": "/Users/shrutikapoor/Development/videoplayer-demo/src/App.css"
+  },
+  "_badge-CrJCxuQ8.js": {
+    "file": "assets/badge-CrJCxuQ8.js",
+    "name": "badge",
+    "imports": [
+      "../../../../~start/default-client-entry.tsx"
+    ]
+  },
+  "src/routes/comments.tsx?tsr-split=component": {
+    "file": "assets/comments-C8wY-kVa.js",
+    "name": "comments",
+    "src": "src/routes/comments.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "../../../../~start/default-client-entry.tsx"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-BATAFYeP.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "../../../../~start/default-client-entry.tsx",
+      "_badge-CrJCxuQ8.js"
+    ],
+    "css": [
+      "assets/App-BL-pdSKQ.css"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=errorComponent": {
+    "file": "assets/index-BNNsnGZd.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=errorComponent",
+    "isDynamicEntry": true,
+    "imports": [
+      "../../../../~start/default-client-entry.tsx"
+    ]
+  },
+  "src/routes/movie.$id.tsx?tsr-split=component": {
+    "file": "assets/movie._id-DDdO1Xow.js",
+    "name": "movie._id",
+    "src": "src/routes/movie.$id.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "../../../../~start/default-client-entry.tsx",
+      "_badge-CrJCxuQ8.js"
+    ]
+  },
+  "src/routes/movie.$id.tsx?tsr-split=errorComponent": {
+    "file": "assets/movie._id-BFiT6HYC.js",
+    "name": "movie._id",
+    "src": "src/routes/movie.$id.tsx?tsr-split=errorComponent",
+    "isDynamicEntry": true,
+    "imports": [
+      "../../../../~start/default-client-entry.tsx"
+    ]
+  }
+}

@@ -1,8 +1,6 @@
-import React from 'react';
-import { ChevronDown } from 'lucide-react';
+
 import styles from './Header.module.css';
 import ThemeToggle from './ThemeToggle';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 const Header = () => {
   return (
@@ -13,13 +11,6 @@ const Header = () => {
         </div>
         <div className={ styles.actions }>
           <ThemeToggle />
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-
         </div>
 
       </div>
