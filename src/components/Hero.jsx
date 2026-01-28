@@ -7,9 +7,9 @@ const Hero = () => {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-black via-gray-900 to-black">
       <img
         src={"https://res.cloudinary.com/dubc3wnbv/image/upload/v1760360925/hero-background_ksbmpq.jpg" }
+        fetchPriority='high'
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/60 to-black/80 z-[1]"></div>
       <div className="relative z-10 text-center max-w-[600px] px-6 flex flex-col items-center w-full">

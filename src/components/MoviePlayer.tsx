@@ -10,7 +10,7 @@ const MoviePlayer = ({ movie }: MoviePlayerProps) => {
     return (
         <div className=" bg-black text-white relative">
             <video
-                height={"250px"}
+                height={250}
                 poster={TMDB_IMAGES_ASSET_URL + movie.poster_path}
                 preload="metadata"
                 aria-label="Play movie"

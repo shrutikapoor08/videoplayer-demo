@@ -1,9 +1,9 @@
 import { hydrateRoot } from 'react-dom/client'
 // Import the generated route tree
-import { createRouter } from './router'
+import { getRouter } from './router'
 import { RouterClient } from '@tanstack/react-router/ssr/client'
 
-const router = createRouter()
+const router = getRouter()
 
 import reportWebVitals from './reportWebVitals.ts'
 

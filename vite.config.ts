@@ -4,6 +4,7 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import tsConfigPaths from 'vite-tsconfig-paths'
+import { analyzer } from 'vite-bundle-analyzer'
 
 const config = {
   mode: "development",
@@ -38,6 +39,7 @@ const config = {
       ],
       silent: true,
     }),
+    analyzer({ open: true }),
   ],
   resolve: {
     alias: {
