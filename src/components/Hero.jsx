@@ -5,12 +5,35 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-black via-gray-900 to-black">
-      <img
-        src={"https://res.cloudinary.com/dubc3wnbv/image/upload/v1760360925/hero-background_ksbmpq.jpg" }
+      {/* <img
+        src={"https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"}
         fetchPriority='high'
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
-      />
+      /> */}
+      <picture>
+  <source
+    media="(max-width: 640px)"
+    srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low,w_640,f_avif/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"
+    type="image/avif"
+  />
+  <source
+    media="(max-width: 1024px)"
+    srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low,w_1024,f_avif/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"
+    type="image/avif"
+  />
+  <source
+    media="(max-width: 1920px)"
+    srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low,w_1920,f_avif/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"
+    type="image/avif"
+  />
+  <img
+    src="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low,w_1920,f_avif/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"
+    fetchPriority="high"
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+</picture>
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/60 to-black/80 z-[1]"></div>
       <div className="relative z-10 text-center max-w-[600px] px-6 flex flex-col items-center w-full">
         <div className="text-white">
