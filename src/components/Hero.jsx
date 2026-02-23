@@ -5,6 +5,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-black via-gray-900 to-black">
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
       {/* <img
         src={"https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low/v1771742191/hero-background_ksbmpq_2_qhn3io.avif"}
         fetchPriority='high'
@@ -34,6 +36,22 @@ const Hero = () => {
     className="absolute inset-0 w-full h-full object-cover"
   />
 </picture>
+=======
+=======
+>>>>>>> Stashed changes
+     <picture className="absolute inset-0 w-full h-full object-cover">
+       <source srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:low,w_640/v1771742191/hero-background_ksbmpq_2_qhn3io.avif" type="image/avif" media="(max-width: 640px)" />
+       <source srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:good,w_720/v1771742191/hero-background_ksbmpq_2_qhn3io.avif" type="image/avif" media="(max-width: 720px)" />
+              <source srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:good,w_1920/v1771742191/hero-background_ksbmpq_2_qhn3io.avif" type="image/avif" media="(max-width: 1920px)" />
+              <source srcSet="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:best/v1771742191/hero-background_ksbmpq_2_qhn3io.avif" type="image/avif" media="(min-width: 1921px)" />
+              <img fetchPriority="high" src="https://res.cloudinary.com/dubc3wnbv/image/upload/q_auto:good/v1771742191/hero-background_ksbmpq_2_qhn3io.avif" alt="Hero Background" className="w-full h-full object-cover object-center" />
+     </picture>
+
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/60 to-black/80 z-[1]"></div>
       <div className="relative z-10 text-center max-w-[600px] px-6 flex flex-col items-center w-full">
         <div className="text-white">
